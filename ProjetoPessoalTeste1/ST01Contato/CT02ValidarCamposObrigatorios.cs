@@ -46,7 +46,7 @@ namespace ST01Contato
         }
         
         [Test]
-        [Obsolete]
+        //[Obsolete]
         public void TheCT02ValidarCamposObrigatoriosTest()
         {
             #region Objects

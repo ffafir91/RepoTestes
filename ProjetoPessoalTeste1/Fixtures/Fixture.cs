@@ -1,11 +1,8 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
 using OpenQA.Selenium.Support.UI;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Configuration;
 
 namespace ProjetoPessoalTeste1.Fixtures
@@ -23,7 +20,7 @@ namespace ProjetoPessoalTeste1.Fixtures
         {
             driver = Comandos.GetBrowserLocal(driver, ConfigurationManager.AppSettings["browser"]);
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            baseURL = "http://automationpractice.com/index.php";
+            baseURL = "https://www.fleury.com.br";
             verificationErrors = new StringBuilder();
         }
 

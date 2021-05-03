@@ -23,6 +23,7 @@ namespace ProjetoPessoalTeste1
                 case "Chrome":
                     driver = new ChromeDriver();
                     driver.Manage().Window.Maximize();
+                    driver.Manage().Cookies.DeleteAllCookies();
                     break;
                 default:
                     driver = new FirefoxDriver();

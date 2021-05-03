@@ -27,7 +27,7 @@ namespace ST01Contato
         public void SetupTest()
         {
             driver = Comandos.GetBrowserLocal(driver, ConfigurationManager.AppSettings["browser"]);
-            baseURL = "http://automationpractice.com/index.php";
+            baseURL = "https://www.fleury.com.br";
             verificationErrors = new StringBuilder();
         }
         
