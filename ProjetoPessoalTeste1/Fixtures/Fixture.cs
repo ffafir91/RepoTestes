@@ -19,8 +19,8 @@ namespace ProjetoPessoalTeste1.Fixtures
         public void SetUp()
         {
             driver = Comandos.GetBrowserLocal(driver, ConfigurationManager.AppSettings["browser"]);
-            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            baseURL = "https://www.fleury.com.br";
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(50));
+            baseURL = ConfigurationManager.AppSettings["url"];
             verificationErrors = new StringBuilder();
         }
 
