@@ -41,12 +41,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bogus, Version=33.0.1.0, Culture=neutral, PublicKeyToken=fa1bb3f3f218129a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bogus.33.0.1\lib\net40\Bogus.dll</HintPath>
+    </Reference>
     <Reference Include="DnsClient, Version=1.0.7.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
       <HintPath>..\packages\DnsClient.1.0.7\lib\net45\DnsClient.dll</HintPath>
     </Reference>
     <Reference Include="ExtentReports, Version=4.0.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ExtentReports.4.0.3\lib\ExtentReports.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\MSTest.TestFramework.2.2.3\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
     </Reference>
@@ -98,7 +102,9 @@
     <Compile Include="ExpectedConditionsActual.cs" />
     <Compile Include="Fixtures\Fixture.cs" />
     <Compile Include="Page Object\Unidade.cs" />
+    <Compile Include="Page Object\Vagas.cs" />
     <Compile Include="PageFactory.cs" />
+    <Compile Include="ST01Contato\CT01Vagas.cs" />
     <Compile Include="ST01Contato\CT01ValidarUnidadeSelecionada.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

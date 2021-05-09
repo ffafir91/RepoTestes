@@ -19,7 +19,7 @@ namespace ProjetoPessoalTeste1.Fixtures
         public void SetUp()
         {
             driver = Comandos.GetBrowserLocal(driver, ConfigurationManager.AppSettings["browser"]);
-            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(50));
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
             baseURL = ConfigurationManager.AppSettings["url"];
             verificationErrors = new StringBuilder();
         }
