@@ -30,16 +30,19 @@ namespace ProjetoPessoalTeste1.Page_Object
         [FindsBy(How = How.Id, Using = "register")]
         public IWebElement buttonRegistreSe { get; set; }
 
-        [FindsBy(How = How.Name, Using = "email")]
+        [FindsBy(How = How.XPath, Using = "//body/div[@id='root']/div[1]/div[@class='sc-hlELIx gBfGmm']/div[@class='sc-fdJbru bAQhvr']")]
+        public IWebElement telaCadastroDadosInicias { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/form[@action='#']/div[1]/div[1]/div[1]/input[@type='text']")]
         public IWebElement email { get; set; }
 
-        [FindsBy(How = How.Name, Using = "cpf")]
+        [FindsBy(How = How.XPath, Using = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/form[@action='#']/div[2]/div[1]/div[1]/input[@name='cpf']")]
         public IWebElement cpf { get; set; }
 
-        [FindsBy(How = How.Name, Using = "password")]
+        [FindsBy(How = How.XPath, Using = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/form[@action='#']/div[3]/div[1]/div[1]/input[@type='password']")]
         public IWebElement senha { get; set; }
 
-        [FindsBy(How = How.Name, Using = "confirmPassword")]
+        [FindsBy(How = How.XPath, Using = "//body/div[@id='root']/div[1]/div[2]/div[2]/div[1]/form[@action='#']/div[4]/div[1]/div[1]/input[@type='password']")]
         public IWebElement repetirSenha { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//body/div[@id='root']/div[@class='sc-csSMhA epWgGQ']/div[@class='sc-hlELIx gBfGmm']/div[2]/div[1]/form[@action='#']/div[5]/div[1]/div[1]/div[1]/div[1]/label[@class='pure-material-checkbox']")]
@@ -66,11 +69,14 @@ namespace ProjetoPessoalTeste1.Page_Object
         [FindsBy(How = How.Id, Using = "gender")]
         public IWebElement generoQuestionario { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//body/div[@id='root']/div[1]/div[@id='container_pdf']/div[1]/div[1]/div[1]/div[@id='tip03']/div[@class='sc-lnmtFM hNYkoa']/div[1]/div[@class='sc-iuDHTM klGvdV']/div[1]/div[1]/div[@class='sc-VJcYb fvGyRD']/div[1]/div[@class='sc-cqCuEk iasZqf']")]
-        public IWebElement generoFemininoQuestionario { get; set; }
+        [FindsBy(How = How.XPath, Using = "//body/div[@id='root']/div[1]/div[@id='container_pdf']/div[1]/div[1]/div[1]/div[@id='tip03']/div[@class='sc-lnmtFM hNYkoa']/div[1]/div[@class='sc-iuDHTM klGvdV']/div[1]/div[1]/div[@class='sc-VJcYb fvGyRD']/div[1]/div[1]")]
+        public IWebElement generoMasculinoQuestionario { get; set; }
 
         [FindsBy(How = How.Id, Using = "birthday")]
         public IWebElement dataNascimentoQuestionario { get; set; }
+
+        [FindsBy(How = How.Name, Using = "about")]
+        public IWebElement sobreVoceQuestionario { get; set; }
 
         [FindsBy(How = How.XPath, Using = "//body/div[@id='root']/div[1]/div[@id='container_pdf']/div[1]/div[@class='sc-ciodno dtaOEt']/div[1]/div[@class='sc-eEieub jmoXLN']/div[1]/button[@type='button']/div[@class='sc-brqgnP fYzsjR curriculum']")]
         public IWebElement buttonSalvarDadosAplicar { get; set; }
@@ -103,7 +109,7 @@ namespace ProjetoPessoalTeste1.Page_Object
         public IWebElement opcao2Tranquilo { get; set; }
 
         [FindsBy(How = How.Id, Using = "Paciente_2")]
-        public IWebElement opcaoPaciente { get; set; }
+        public IWebElement opcao2Paciente { get; set; }
 
         [FindsBy(How = How.Id, Using = "Independente_2")]
         public IWebElement opcao2Independente { get; set; }
@@ -122,6 +128,9 @@ namespace ProjetoPessoalTeste1.Page_Object
 
         [FindsBy(How = How.Id, Using = "saveFinalize")]
         public IWebElement buttonSalvarDadosFinalizar { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//body/div[@id='root']/div[1]/div[@id='container_pdf']/div[1]/div[1]/div[@class='sc-elJkPf hKhwpe']/div[1]/div[@class='sc-eAudoH gfkLjV']/span[@class='sc-bLJvFH fXAYS']/a[@href='mailto:testes@testes.com']")]
+        public IWebElement validarEmailCadastrado { get; set; }
 
         #endregion
 
@@ -143,6 +152,11 @@ namespace ProjetoPessoalTeste1.Page_Object
             buttonRegistreSe.Click();
         }
 
+        public void ClicarNoCampoEmail()
+        {
+            email.Click();
+        }
+
         public void SelecionarCheckboxLiConcordo()
         {
             checkboxLiConcordo.Click();
@@ -151,6 +165,81 @@ namespace ProjetoPessoalTeste1.Page_Object
         public void ClicarEmCadastrar()
         {
             buttonCadastrar.Click();
+        }
+
+        public void ClicarNoComboboxGenero()
+        {
+            generoQuestionario.Click();
+        }
+
+        public void SelecionarGeneroMasculino()
+        {
+            generoMasculinoQuestionario.Click();
+        }
+
+        public void ClicarEmSalvarDadosIrProximaEtapa()
+        {
+            buttonSalvarDadosAplicar.Click();
+        }
+
+        public void ClicarOpcao1Ativo()
+        {
+            opcao1Ativo.Click();
+        }
+
+        public void Clicaropcao1BomCompanheiro()
+        {
+            opcao1BomCompanheiro.Click();
+        }
+
+        public void Clicaropcao1Conservador()
+        {
+            opcao1Conservador.Click();
+        }
+
+        public void Clicaropcao1Dedicado()
+        {
+            opcao1Dedicado.Click();
+        }
+
+        public void Clicaropcao1Modesto()
+        {
+            opcao1Modesto.Click();
+        }
+
+        public void Clicaropcao1Persistente()
+        {
+            opcao1Persistente.Click();
+        }
+
+        public void Clicaropcao2Contagiante()
+        {
+            opcao2Contagiante.Click();
+        }
+
+        public void Clicaropcao2Exigente()
+        {
+            opcao2Exigente.Click();
+        }
+
+        public void Clicaropcao2Independente()
+        {
+            opcao2Independente.Click();
+        }
+
+        public void Clicaropcao2Paciente()
+        {
+            opcao2Paciente.Click();
+        }
+
+        public void Clicaropcao2Sincero()
+        {
+            opcao2Sincero.Click();
+        }
+
+        public void Clicaropcao2Tranquilo()
+        {
+            opcao2Tranquilo.Click();
         }
 
         public void ClicarEmSalvarDadosProximaEtapa()

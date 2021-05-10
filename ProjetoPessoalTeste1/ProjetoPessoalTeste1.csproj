@@ -101,11 +101,9 @@
     <Compile Include="Comandos.cs" />
     <Compile Include="ExpectedConditionsActual.cs" />
     <Compile Include="Fixtures\Fixture.cs" />
-    <Compile Include="Page Object\Unidade.cs" />
     <Compile Include="Page Object\Vagas.cs" />
     <Compile Include="PageFactory.cs" />
     <Compile Include="ST01Contato\CT01Vagas.cs" />
-    <Compile Include="ST01Contato\CT01ValidarUnidadeSelecionada.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
