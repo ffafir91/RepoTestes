@@ -101,10 +101,12 @@
     <Compile Include="Comandos.cs" />
     <Compile Include="ExpectedConditionsActual.cs" />
     <Compile Include="Fixtures\Fixture.cs" />
-    <Compile Include="Page Object\Vagas.cs" />
+    <Compile Include="Page Object\Carrinho.cs" />
+    <Compile Include="Page Object\Produto.cs" />
+    <Compile Include="Page Object\TelaInicial_Pesquisar.cs" />
     <Compile Include="PageFactory.cs" />
-    <Compile Include="ST01Contato\CT01Vagas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ST01Contato\ECommerce_Amazon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
